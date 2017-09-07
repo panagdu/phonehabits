@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">phonehabits</string>
+    <string name="app_name">PhoneHabits</string>
+
+    <string name="intro">You\'ve checked your phone</string>
+    <string name="initial_counter">1</string>
+    <string name="times">times</string>
+    <string name="last_days">Last 7 days</string>
+
 </resources>
