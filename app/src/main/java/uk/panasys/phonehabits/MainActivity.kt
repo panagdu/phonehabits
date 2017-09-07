@@ -1,5 +1,6 @@
 package uk.panasys.phonehabits
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -21,28 +22,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun BarChart.renderBarChart() {
-        val entries = listOf(
-                BarEntry(0f, 1f),
-                BarEntry(1f, 2f),
-                BarEntry(2f, 3f),
-                BarEntry(3f, 4f),
-                BarEntry(4f, 5f),
-                BarEntry(5f, 6f),
-                BarEntry(6f, 7f)
-        )
+        val entries = prepareDataForChart()
 
         val barDataSet = BarDataSet(entries, context.getString(R.string.last_days))
         barDataSet.valueTextSize = 14f
+        barDataSet.color = Color.argb(255, 255, 175, 64)
         barDataSet.valueFormatter = IntValueFormatter()
+
         val barData = BarData(barDataSet)
+        this.data = barData
+
         this.setPinchZoom(false)
         this.setDrawGridBackground(false)
         this.description.isEnabled = false
         this.axisLeft.isEnabled = false
         this.xAxis.isEnabled = false
         this.axisRight.isEnabled = false
-        this.data = barData
-
         this.invalidate()
+    }
+
+    private fun prepareDataForChart(): List<BarEntry> {
+        return listOf(
+                BarEntry(6f, 25f),
+                BarEntry(5f, 34f),
+                BarEntry(4f, 67f),
+                BarEntry(3f, 15f),
+                BarEntry(2f, 29f),
+                BarEntry(1f, 43f),
+                BarEntry(0f, 56f)
+        )
     }
 }
