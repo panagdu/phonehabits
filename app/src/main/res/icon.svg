@@ -15,7 +15,10 @@
    version="1.1"
    id="svg1676"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="icon.svg">
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/home/panagdu/work/projects/phonehabits/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+   inkscape:export-xdpi="94.239998"
+   inkscape:export-ydpi="94.239998">
   <defs
      id="defs1670" />
   <sodipodi:namedview
@@ -25,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="428.91721"
-     inkscape:cy="-61.416632"
+     inkscape:zoom="0.79545212"
+     inkscape:cx="54.011735"
+     inkscape:cy="-46.486176"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,11 +38,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
+     inkscape:window-width="960"
      inkscape:window-height="1080"
-     inkscape:window-x="0"
+     inkscape:window-x="960"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata1673">
     <rdf:RDF>
@@ -89,7 +92,7 @@
        id="path723" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:#333333;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277775"
+       style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277775"
        d="m 30.274716,20.331669 h 12.02062 c 0.0248,0 0.0441,0.0207 0.0441,0.0427 v 23.771155 c 0,0.02341 -0.0193,0.04134 -0.0441,0.04134 h -12.02062 c -0.022,0 -0.0413,-0.01791 -0.0413,-0.04134 V 20.374369 c 0,-0.022 0.0193,-0.0427 0.0413,-0.0427"
        id="path725" />
     <path
@@ -142,16 +145,5 @@
        style="fill:#fae1c7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277775"
        d="m 38.536046,47.419762 2.40744,4.270539 -3.06889,-4.41661 c 0.22186,0.01378 0.43822,0.05099 0.66145,0.146071"
        id="path745" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="31.767321"
-       y="31.643389"
-       id="text26"><tspan
-         sodipodi:role="line"
-         id="tspan24"
-         x="31.767321"
-         y="31.643389"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:'Century Schoolbook L';-inkscape-font-specification:'Century Schoolbook L, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">PH</tspan></text>
   </g>
 </svg>
