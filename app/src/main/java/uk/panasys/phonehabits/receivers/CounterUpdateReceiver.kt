@@ -1,8 +1,12 @@
 package uk.panasys.phonehabits.receivers;
 
-/**
- * Created by panagdu on 09/09/17.
- */
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import uk.panasys.phonehabits.activities.ActivityEnhancer
 
-public class CounterUpdateReceiver {
+class CounterUpdateReceiver(private val activityEnhancer: ActivityEnhancer) : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
+        activityEnhancer.updateCounterAndChart()
+    }
 }
