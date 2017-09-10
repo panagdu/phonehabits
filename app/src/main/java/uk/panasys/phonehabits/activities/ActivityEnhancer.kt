@@ -16,8 +16,9 @@ class ActivityEnhancer(private val activity: AppCompatActivity) {
 
     fun updateCounterAndChart() {
         val counter: TextView = activity.findViewById(R.id.currentCounter)
+        val timesText: TextView = activity.findViewById(R.id.times)
         counter.text = SharedPrefUtils.getPreference(activity, MainActivity.CURRENT_COUNTER, 1).toString()
-
+        timesText.text = if(counter.text == "1") activity.resources.getString(R.string.time_today) else activity.resources.getString(R.string.times_today)
         val chart = activity.findViewById<View>(R.id.chart) as BarChart
         chart.renderBarChart()
     }
