@@ -6,6 +6,6 @@ import com.github.mikephil.charting.utils.ViewPortHandler
 
 class IntValueFormatter : IValueFormatter {
     override fun getFormattedValue(value: Float, entry: Entry?, dataSetIndex: Int, viewPortHandler: ViewPortHandler?): String {
-        return Math.round(value).toString()
+        return if (value > 0) Math.round(value).toString() else ""
     }
 }
