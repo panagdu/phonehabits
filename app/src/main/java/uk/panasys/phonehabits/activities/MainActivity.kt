@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val CURRENT_COUNTER = "CURRENT_COUNTER"
     }
 
-    val activityEnhancer = ActivityEnhancer(this)
+    private val activityEnhancer = ActivityEnhancer(this)
 
     private val counterUpdatedReceiver = CounterUpdateReceiver(activityEnhancer)
 
