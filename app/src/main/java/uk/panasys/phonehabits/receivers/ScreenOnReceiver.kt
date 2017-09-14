@@ -26,11 +26,13 @@ class ScreenOnReceiver : BroadcastReceiver() {
         val valuesPerDay: String = SharedPrefUtils.getPreference(context, LATEST_SEVEN_DAYS, context.getString(R.string.latest_seven_days_default))
         val valuePerDayList = valuesPerDay.split(", ").toMutableList()
         if (today != lastKnownDate) {
-            SharedPrefUtils.setPreference(context, LATEST_KNOWN_DATE, today)
             valuePerDayList.add(count.toString())
             val lastSevenDays = valuePerDayList.drop(if (valuePerDayList.size > 7) valuePerDayList.size - 7 else 0)
-            SharedPrefUtils.setPreference(context, MainActivity.CURRENT_COUNTER, 1)
-            SharedPrefUtils.setPreference(context, LATEST_SEVEN_DAYS, lastSevenDays.joinToString())
+            with(SharedPrefUtils) {
+                setPreference(context, LATEST_KNOWN_DATE, today)
+                setPreference(context, MainActivity.CURRENT_COUNTER, 1)
+                setPreference(context, LATEST_SEVEN_DAYS, lastSevenDays.joinToString())
+            }
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent("counter-updated"))
         } else {
             SharedPrefUtils.setPreference(context, MainActivity.CURRENT_COUNTER, count + 1)
