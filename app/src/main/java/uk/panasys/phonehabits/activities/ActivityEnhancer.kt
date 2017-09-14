@@ -18,7 +18,7 @@ class ActivityEnhancer(private val activity: AppCompatActivity) {
         val counter: TextView = activity.findViewById(R.id.currentCounter)
         val timesText: TextView = activity.findViewById(R.id.times)
         counter.text = SharedPrefUtils.getPreference(activity, MainActivity.CURRENT_COUNTER, 1).toString()
-        timesText.text = if(counter.text == "1") activity.resources.getString(R.string.time_today) else activity.resources.getString(R.string.times_today)
+        timesText.text = if (counter.text == "1") activity.resources.getString(R.string.time_today) else activity.resources.getString(R.string.times_today)
         val chart = activity.findViewById<View>(R.id.chart) as BarChart
         chart.renderBarChart()
     }
@@ -46,7 +46,7 @@ class ActivityEnhancer(private val activity: AppCompatActivity) {
     }
 
     private fun prepareDataForChart(): List<BarEntry> {
-        val valuesPerDay = SharedPrefUtils.getPreference(activity, "LATEST_SEVEN_DAYS", "0, 0, 0, 0, 0, 0, 0")
+        val valuesPerDay = SharedPrefUtils.getPreference(activity, "LATEST_SEVEN_DAYS", activity.getString(R.string.latest_seven_days_default))
         val valuePerDayList = valuesPerDay.split(", ").toMutableList()
         return valuePerDayList.mapIndexed { i, s -> BarEntry(i.toFloat(), s.toFloat()) }.toList()
     }

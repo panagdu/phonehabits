@@ -7,4 +7,8 @@
     <string name="times_today">times today</string>
     <string name="last_days">Last 7 days</string>
 
+
+    <!--PREFERENCES DEFAULTS-->
+    <string name="latest_seven_days_default">0, 0, 0, 0, 0, 0, 0</string>
+
 </resources>

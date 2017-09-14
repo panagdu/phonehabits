@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.support.v4.content.LocalBroadcastManager
+import uk.panasys.phonehabits.R
 import uk.panasys.phonehabits.activities.MainActivity
 import uk.panasys.phonehabits.utils.SharedPrefUtils
 import java.text.DateFormat
@@ -22,7 +23,7 @@ class ScreenOnReceiver : BroadcastReceiver() {
     private fun increaseOrResetCounter(context: Context, count: Int) {
         val lastKnownDate = SharedPrefUtils.getPreference(context, LATEST_KNOWN_DATE, "")
         val today = DateFormat.getDateInstance().format(Calendar.getInstance().time)
-        val valuesPerDay: String = SharedPrefUtils.getPreference(context, LATEST_SEVEN_DAYS, "0, 0, 0, 0, 0, 0, 0")
+        val valuesPerDay: String = SharedPrefUtils.getPreference(context, LATEST_SEVEN_DAYS, context.getString(R.string.latest_seven_days_default))
         val valuePerDayList = valuesPerDay.split(", ").toMutableList()
         if (today != lastKnownDate) {
             SharedPrefUtils.setPreference(context, LATEST_KNOWN_DATE, today)
