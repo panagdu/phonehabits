@@ -32,7 +32,13 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activities.ValuesPerHourActivity" />
+        <activity
+            android:name=".activities.ValuesPerHourActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uk.panasys.phonehabits.activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

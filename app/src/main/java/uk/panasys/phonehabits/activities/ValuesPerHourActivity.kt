@@ -1,8 +1,10 @@
 package uk.panasys.phonehabits.activities
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.MenuItem
 import android.view.View
 import com.github.mikephil.charting.charts.HorizontalBarChart
 import com.github.mikephil.charting.components.XAxis
@@ -58,5 +60,15 @@ class ValuesPerHourActivity : AppCompatActivity() {
         val valuesPerDay = SharedPrefUtils.getPreference(activity, "VALUES_PER_HOUR", activity.getString(R.string.values_per_hour_default))
         val valuePerDayList = valuesPerDay.split(", ").toMutableList()
         return valuePerDayList.mapIndexed { i, s -> BarEntry(i.toFloat(), s.toFloat()) }.toList()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == android.R.id.home) {
+            startActivity(Intent(baseContext, MainActivity::class.java))
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
