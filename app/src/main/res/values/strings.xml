@@ -6,10 +6,13 @@
     <string name="time_today">time today</string>
     <string name="times_today">times today</string>
     <string name="last_days">Last 7 days</string>
+    <string name="values_per_hour">Values per hour</string>
 
 
     <!--PREFERENCES DEFAULTS-->
     <string name="latest_seven_days_default">0, 0, 0, 0, 0, 0, 0</string>
-    <string name="average_per_hour">0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</string>
+    <string name="values_per_hour_default">0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</string>
+    <string name="action_options">Options</string>
+    <string name="action_values_per_hour">Values per hour</string>
 
 </resources>

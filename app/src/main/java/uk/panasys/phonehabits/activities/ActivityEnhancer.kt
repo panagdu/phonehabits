@@ -1,5 +1,6 @@
 package uk.panasys.phonehabits.activities
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -19,7 +20,7 @@ class ActivityEnhancer(private val activity: AppCompatActivity) {
         val timesText: TextView = activity.findViewById(R.id.times)
         counter.text = SharedPrefUtils.getPreference(activity, MainActivity.CURRENT_COUNTER, 1).toString()
         timesText.text = if (counter.text == "1") activity.resources.getString(R.string.time_today) else activity.resources.getString(R.string.times_today)
-        val chart = activity.findViewById<View>(R.id.chart) as BarChart
+        val chart = activity.findViewById<View>(R.id.sevenDaysChart) as BarChart
         chart.renderBarChart()
     }
 

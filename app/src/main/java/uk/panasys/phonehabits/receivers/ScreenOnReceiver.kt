@@ -30,7 +30,7 @@ class ScreenOnReceiver : BroadcastReceiver() {
 
     private fun calculateValuesPerDay(context: Context) {
         val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
-        val valuesPerHourPreference = SharedPrefUtils.getPreference(context, VALUES_PER_HOUR, context.getString(R.string.average_per_hour))
+        val valuesPerHourPreference = SharedPrefUtils.getPreference(context, VALUES_PER_HOUR, context.getString(R.string.values_per_hour_default))
         val valuesPerHour = valuesPerHourPreference.split(", ").toMutableList()
         valuesPerHour[hour] = valuesPerHour[hour].toInt().plus(1).toString()
         SharedPrefUtils.setPreference(context, VALUES_PER_HOUR, valuesPerHour.joinToString())
