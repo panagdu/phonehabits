@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
 import uk.panasys.phonehabits.R
 import uk.panasys.phonehabits.receivers.CounterUpdateReceiver
 import uk.panasys.phonehabits.services.CountService
@@ -39,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             val countService = Intent(this, CountService::class.java)
             startService(countService)
         }
-
     }
 
     override fun onResume() {
@@ -66,6 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
